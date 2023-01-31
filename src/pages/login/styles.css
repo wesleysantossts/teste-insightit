@@ -2,3 +2,8 @@
   font-size: 1.2em;
   background-color: white;
 }
+
+.btn-primary {
+  background: var(--cor-primaria);
+}
+

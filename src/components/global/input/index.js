@@ -4,11 +4,11 @@ import './styles.css';
 const Input = (props) => {
   return (
     <div className='form-group'>
-      {props.label && <label className='control-label mb-1 fs-3'>{props.label}</label>}
+      {props.label && <label className='control-label mb-1 fs-4' htmlFor={`${props.name}`}>{props.label}</label>}
       <div className='input-group input-group-lg flex-nowrap mb-2'>
         {props.icon && <span className='input-group-text'><i className={`glyphicon glyphicon-${props.icon}`}></i></span>}
         <input
-          className='form-control fs-3'
+          className='form-control fs-4'
           id={props.id}
           name={props.name}
           type={props.type}
