@@ -18,7 +18,7 @@ Formulário de cadastro desenvolvido seguindo os requisitos do enunciado do test
   <summary>Iniciando o projeto</summary>
   <ul>
     <li>Clone este repositório na sua máquina.</li>
-    <li>Após isso, entre na pasta do projeto pelo CMD e digite o comando <code>npm install</code> para instalar as dependências</li>
+    <li>Após isso, entre na pasta do projeto pelo CMD e digite o comando <code>npm install</code> para instalar as dependências.</li>
     <li>Assim que instalar as dependências, digite no CMD o comando <code>npm start</code>, que iniciará a aplicação no seu navegador.</li>
   </ul>
 </details>
