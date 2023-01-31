@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <Fragment>
-      <ToastContainer autoClose={3000} />
+      <ToastContainer autoClose={2500} />
       <BrowserRouter>
         <Routes />
       </BrowserRouter>

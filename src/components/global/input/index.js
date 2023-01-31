@@ -3,7 +3,7 @@ import './styles.css';
 
 const Input = React.forwardRef((props, ref) => {
   return (
-    <div className='form-group'>
+    <div className='form-group mb-2'>
       {props.label && <label className='control-label mb-1 fs-4' htmlFor={`${props.htmlFor}`}>{props.label} {props.errors && <span className='text-danger'>*</span>}</label>}
       <div className='input-group input-group-lg flex-nowrap mb-2'>
         {props.icon && <span className='input-group-text'><i className={`glyphicon glyphicon-${props.icon}`}></i></span>}

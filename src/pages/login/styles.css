@@ -1,9 +1,31 @@
 .container-formulario {
   font-size: 1.2em;
   background-color: white;
+  width: 28%;
 }
 
 .btn-primary {
   background: var(--cor-primaria);
+  height: 45px;
 }
 
+@media screen and (max-width: 1350px) {
+  .container-formulario {
+    width: 35%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container-formulario {
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-formulario {
+    width: 85%;
+    height: auto;
+  }
+}

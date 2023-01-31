@@ -22,11 +22,12 @@ const Login = () => {
     formState: { errors }
   } = useForm({ resolver: yupResolver(schema) });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
+    e.preventDefault();
     if (data) {
       toast.success('Cadastro realizado com sucesso', {
         position: toast.POSITION.TOP_RIGHT
-      })
+      });
     }
   }
 
@@ -41,7 +42,7 @@ const Login = () => {
           <InputComponent type='number' id='telefone' htmlFor='telefone' label='Telefone' placeholder='(99) 99999-9999' icon='phone' {...register('telefone')} errors={errors.telefone?.message} />
           <InputComponent type='email' id='email' htmlFor='email' label='E-mail' icon='envelope' {...register('email')} errors={errors.email?.message} />
           <InputComponent type='date' id='data' htmlFor='data' label='Data de nascimento' icon='calendar' {...register('data')} errors={errors.data?.message} />    
-          <button type='submit' className='btn btn-primary w-100 mt-4 fs-3 fw-bold border-0'>ENVIAR</button>
+          <button type='submit' className='btn btn-primary w-100 mt-5 fs-3 fw-bold border-0'>ENVIAR</button>
 
         </form>
       </div>
