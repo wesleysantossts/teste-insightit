@@ -1,11 +1,17 @@
+.form-group {
+  height: 80px;
+}
+
 .input-group {
   height: 35px;
 }
 
-input::placeholder,
-input[type="date"]::-webkit-datetime-edit-text,
-input[type="date"]::-webkit-datetime-edit-month-field,
-input[type="date"]::-webkit-datetime-edit-day-field,
-input[type="date"]::-webkit-datetime-edit-year-field {
+input::placeholder {
   color: #ccc !important;
+}
+
+.form-control.is-valid,
+.form-control.is-invalid {
+  background-image: none;
+  padding-right: inherit;
 }

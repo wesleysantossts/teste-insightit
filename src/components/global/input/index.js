@@ -1,24 +1,21 @@
 import React from 'react';
 import './styles.css';
 
-const Input = (props) => {
+const Input = React.forwardRef((props, ref) => {
   return (
     <div className='form-group'>
-      {props.label && <label className='control-label mb-1 fs-4' htmlFor={`${props.name}`}>{props.label}</label>}
+      {props.label && <label className='control-label mb-1 fs-4' htmlFor={`${props.htmlFor}`}>{props.label} {props.errors && <span className='text-danger'>*</span>}</label>}
       <div className='input-group input-group-lg flex-nowrap mb-2'>
         {props.icon && <span className='input-group-text'><i className={`glyphicon glyphicon-${props.icon}`}></i></span>}
         <input
-          className='form-control fs-4'
-          id={props.id}
-          name={props.name}
-          type={props.type}
-          placeholder={props.placeholder || false}
-          required={props.required || false}
-          readOnly={props.readonly || false}
+          {...props}
+          ref={ref}
+          className={`form-control fs-4 ${props.errors && 'is-invalid'}`}
         />
       </div>
+      {(props.errors) && <p className={`fs-6 text-danger`}>{props.errors}</p>}
     </div>
   )
-};
+});
 
 export default Input;

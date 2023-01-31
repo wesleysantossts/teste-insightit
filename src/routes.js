@@ -10,11 +10,11 @@ const routes = [
   }
 ];
 
-const RoutesComponent = (props) => {
-  const routesComponent = routes.map((rota, index) => (<Route key={index} path={rota.path} element={rota.element} />))
+const RoutesComponent = () => {
+  const routesApp = routes.map((rota, index) => (<Route key={index} path={rota.path} element={rota.element} />))
   return (
     <Routes>
-      {routesComponent}
+      {routesApp}
     </Routes>
   )
 };
