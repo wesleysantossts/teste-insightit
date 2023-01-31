@@ -1,0 +1,4 @@
+.container, .container-fluid {
+  height: 100vh;
+  background-color: var(--cor-primaria)
+}
