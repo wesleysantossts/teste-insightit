@@ -7,7 +7,7 @@ import InputComponent from '../../components/global/input';
 import './styles.css';
 import { toast } from 'react-toastify';
 
-const Login = () => {
+const Signup = () => {
   const regexNome = /^[ a-zA-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/
   const schema = yup.object().shape({
     nome: yup.string().required('Campo obrigatório').matches(regexNome, 'Números não são permitidos'),
@@ -42,7 +42,7 @@ const Login = () => {
           <InputComponent type='number' id='telefone' htmlFor='telefone' label='Telefone' placeholder='(99) 99999-9999' icon='phone' {...register('telefone')} errors={errors.telefone?.message} />
           <InputComponent type='email' id='email' htmlFor='email' label='E-mail' icon='envelope' {...register('email')} errors={errors.email?.message} />
           <InputComponent type='date' id='data' htmlFor='data' label='Data de nascimento' icon='calendar' {...register('data')} errors={errors.data?.message} />    
-          <button type='submit' className='btn btn-primary w-100 mt-5 fs-3 fw-bold border-0'>ENVIAR</button>
+          <button type='submit' className='btn btn-primary w-100 mt-5 fs-3 fw-bold border-0'>CADASTRAR</button>
 
         </form>
       </div>
@@ -50,4 +50,4 @@ const Login = () => {
   )
 };
 
-export default Login;
+export default Signup;
