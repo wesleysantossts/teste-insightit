@@ -8,7 +8,7 @@ import './styles.css';
 import { toast } from 'react-toastify';
 
 const Signup = () => {
-  const regexNome = /^[ a-zA-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/
+  const regexNome = /^[ a-zA-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
   const schema = yup.object().shape({
     nome: yup.string().required('Campo obrigatório').matches(regexNome, 'Números não são permitidos'),
     endereco: yup.string().required('Campo obrigatório'),
@@ -22,14 +22,13 @@ const Signup = () => {
     formState: { errors }
   } = useForm({ resolver: yupResolver(schema) });
 
-  const onSubmit = (data, e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
     if (data) {
       toast.success('Cadastro realizado com sucesso', {
         position: toast.POSITION.TOP_RIGHT
       });
     }
-  }
+  };
 
   return (
     <DefaultLayout fluid>
